@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.name }}</title>
-</head>
-<body>
-    <h1>{{ site.name }}</h1> 
-    <p>created by {{ site.author }}</p>
-</body>
-</html>
+---
+title: home
+layout: default
+---
+
+<h2>All Articles</h2>
+<ul>
+    {% for post in site.posts %}
+    <li>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    </li>
+    {% endfor %}
+</ul>   
